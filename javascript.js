@@ -2,8 +2,8 @@ var jugador1=localStorage.getItem("Tag1")
 var jugador2=localStorage.getItem("tag2")
 var punto1=0
 var punto2=0
-document.getElementById("h3").innerHTML=jugador1+":"
-document.getElementById("h4").innerHTML=jugador2+":"
+document.getElementById("h3").innerHTML=jugador1+":"+"<span id='span'></span>"
+document.getElementById("h4").innerHTML=jugador2+":"+"<span id='span2'></span>"
 document.getElementById("span").innerHTML=punto1
 document.getElementById("span2").innerHTML=punto2
 document.getElementById("span3").innerHTML=jugador1
@@ -30,7 +30,7 @@ function Palabra(){
      var h3="<h3> "+painicial+" </h3>"
      var input=" <h3> responde >:( <h3><input type='text' id='inmputt'> <button onclick='Respondicion()'>Respondicion</button>"
 document.getElementById("div2").innerHTML=h3+input     
-document.getElementById("inmputt").innerHTML=""
+document.getElementById("inmput").value=""
 }
 var Preguntacion="jugador1"
 var respondon="jugador2"
@@ -53,10 +53,11 @@ if (respondon=="jugador2") {
     document.getElementById("span3").innerHTML=jugador2
 document.getElementById("span4").innerHTML=jugador1
 }
-if (respondon=="jugador1") {
+else if (respondon=="jugador1") {
     respondon="jugador2"
     Preguntacion="jugador1"
     document.getElementById("span3").innerHTML=jugador1
 document.getElementById("span4").innerHTML=jugador2
 }
+document.getElementById("div2").innerHTML=""
 }
